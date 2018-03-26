@@ -107,6 +107,7 @@ void Renderer::AddShader(GLuint ShaderProgram, const char* pShaderText, GLenum S
 		printf("%s \n", pShaderText);
 	}
 
+	// Attach 이후에 지워져도 되는 오브젝트 이므로 지역변수 ShaderObj이다.
 	// ShaderProgram 에 attach!!
 	glAttachShader(ShaderProgram, ShaderObj);
 }
@@ -128,6 +129,7 @@ bool Renderer::ReadFile(char* filename, std::string *target)
 	return true;
 }
 
+//  Shader 확인
 GLuint Renderer::CompileShaders(char* filenameVS, char* filenameFS)
 {
 	GLuint ShaderProgram = glCreateProgram(); //빈 쉐이더 프로그램 생성
@@ -137,6 +139,9 @@ GLuint Renderer::CompileShaders(char* filenameVS, char* filenameFS)
 	}
 
 	std::string vs, fs;
+
+	// ReadFile
+	// filename 받아서 string으로 변환해주는 것
 
 	//shader.vs 가 vs 안으로 로딩됨
 	if (!ReadFile(filenameVS, &vs)) {
