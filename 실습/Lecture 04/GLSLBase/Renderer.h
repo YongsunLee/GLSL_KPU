@@ -47,9 +47,11 @@ private:
 	GLuint m_Lecture3 = 0;
 	GLuint m_Color = 0;
 	GLfloat gTime = 0.f;
+	GLfloat gTime2 = 0.f;
 
 	// ½Ç½À 4
 	GLuint m_Lecture4 = 0;
+	GLuint m_Lecture4_1 = 0;
 	GLuint m_Lecture4Color1 = 0;
 	GLuint m_Lecture4Color2 = 0;
 };

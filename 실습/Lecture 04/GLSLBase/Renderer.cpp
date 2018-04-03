@@ -107,7 +107,16 @@ void Renderer::CreateVertexBufferObjects()
 	glBindBuffer(GL_ARRAY_BUFFER, m_Lecture4Color2);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(color4_2), color4_2, GL_STATIC_DRAW);
 
+	float vertices4_1[]
+		= { -0.6f,  0.0f, 0.0f, 0.0f,
+			-0.3f,  0.3f, 0.0f, 0.4f, 
+			 0.3f, -0.3f, 0.0f, 0.6f,
+			 0.6f,  0.0f, 0.0f, 1.0f
+	};
 
+	glGenBuffers(1, &m_Lecture4_1);
+	glBindBuffer(GL_ARRAY_BUFFER, m_Lecture4_1);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices4_1), vertices4_1, GL_STATIC_DRAW);
 }
 
 //Shader 생성 함수
@@ -338,9 +347,7 @@ void Renderer::Lecture4()
 	glEnableVertexAttribArray(posId);
 
 	glBindBuffer(GL_ARRAY_BUFFER, m_Lecture4);
-	{
-		glVertexAttribPointer(posId, 4, GL_FLOAT, GL_FALSE, 0, 0);
-	}
+	glVertexAttribPointer(posId, 4, GL_FLOAT, GL_FALSE, 0, 0);
 
 	// uniform
 	GLuint id = glGetUniformLocation(m_SolidRectShader, "u_Scale");
@@ -357,9 +364,27 @@ void Renderer::Lecture4()
 	glEnableVertexAttribArray(posId);
 
 	glBindBuffer(GL_ARRAY_BUFFER, m_VBORect);
-	{
-		glVertexAttribPointer(posId, 3, GL_FLOAT, GL_FALSE, 0, 0);
-	}
+	glVertexAttribPointer(posId, 3, GL_FLOAT, GL_FALSE, 0, 0);
+
+	// uniform
+	GLuint id = glGetUniformLocation(m_SolidRectShader, "u_Scale");
+	glUniform1f(id, gTime);
+
+	GLuint id1 = glGetUniformLocation(m_SolidRectShader, "u_Size");
+	glUniform1f(id1, gTime2);
+
+	gTime += 0.05f;
+	gTime2 -= 0.05f;
+
+	glDrawArrays(GL_TRIANGLES, 0, 6);
+
+	// 3번
+	/*
+	GLint posId = glGetAttribLocation(m_SolidRectShader, "a_Position");
+	glEnableVertexAttribArray(posId);
+
+	glBindBuffer(GL_ARRAY_BUFFER, m_Lecture4_1);
+	glVertexAttribPointer(posId, 4, GL_FLOAT, GL_FALSE, 0, 0);
 
 	// uniform
 	GLuint id = glGetUniformLocation(m_SolidRectShader, "u_Scale");
@@ -367,6 +392,9 @@ void Renderer::Lecture4()
 
 	gTime += 0.05f;
 
-	glDrawArrays(GL_TRIANGLES, 0, 6);
+	// DrawArray 전에 모두 불려야 한다.
+	glDrawArrays(GL_LINES, 0, 8);
+	*/
+
 }
 // End
