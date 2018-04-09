@@ -19,6 +19,13 @@ public:
 	// Lecture 5
 	void Lecture5();
 
+	// Lecture 5_1
+	void Lecture5InputVersion();
+
+	void SetTargetPoint(float x, float y);
+	
+	float m_targetPointX, m_targetPointY;
+
 private:
 	void Initialize(int windowSizeX, int windowSizeY);
 	bool ReadFile(char* filename, std::string *target);
@@ -37,7 +44,9 @@ private:
 	GLuint m_VBOPoint = 0;
 	GLuint m_VBOPoints = 0;
 	GLuint m_VBOMovePoints = 0;
+
 	GLfloat m_fTimer = 0;
 
+	
 };
 

@@ -23,7 +23,9 @@ void RenderScene(void)
 	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
 	// Lecture5
-	g_Renderer->Lecture5();
+	//g_Renderer->Lecture5();
+
+	g_Renderer->Lecture5InputVersion();
 
 	glutSwapBuffers();
 }
@@ -36,6 +38,7 @@ void Idle(void)
 void MouseInput(int button, int state, int x, int y)
 {
 	RenderScene();
+	g_Renderer->SetTargetPoint(float(x), float(y));
 }
 
 void KeyInput(unsigned char key, int x, int y)

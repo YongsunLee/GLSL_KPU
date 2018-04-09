@@ -221,6 +221,8 @@ void Renderer::Test()
 
 void Renderer::Lecture5()
 {
+	// Lecture 5_1
+	
 	glUseProgram(m_SolidRectShader);
 
 	GLint posId = glGetAttribLocation(m_SolidRectShader, "a_Position");
@@ -234,10 +236,82 @@ void Renderer::Lecture5()
 	GLuint id = glGetUniformLocation(m_SolidRectShader, "u_Scale");
 	glUniform1f(id, m_fTimer);
 
+	// -1 ~ 1 사이
+	// Lecture 5에서 Uniform 값을 1보다 커지는 순간 -1.f 로 변경했기 때문에
+	// 처음 값이 1에 도달하면 전부 -1로 변경 되었다.
+
 	m_fTimer += 0.01f;
-	if (m_fTimer > 1.f) m_fTimer = -1.f;
+	// 조건문을 지우면 전부 1로 가면서 사라진다.
+	// Vertex를 생성할 때 x 0에서 2초 사이에만 발생하도록 만들어 놨기 때문 
+	// 2초가 지난 Vertex 들은 1.f 값을 넘어가서 화면에서 사라진다. 
+	// 이 값을 (3초가 되는 순간을 1초가 되는 순간으로 변경하면 또 반복된다.)
+	//if (m_fTimer > 1.f) m_fTimer = -1.f;
 
 	glPointSize(2);
 
 	glDrawArrays(GL_POINTS, 0, 500);
+}
+
+void Renderer::Lecture5InputVersion()
+{
+	// Lecutre 5는 (-1,0) 에서 (1,0)으로 Vertex가 난수에 따라서 sin곡선을 따라 이동하는 방식이었다.
+	// 이 시작점과 끝점을 입력받는 방식으로 변경하자.
+
+	// 선의 방정식을 사용한다. (x,y) + k * t (원점 + 기울기 * 시간)
+	// sin 곡선의 중앙이 해당 직선인 것 처럼 수직을 변경해줘야 한다. (원점이 더해져야 한다.)
+	// 즉 현재 기준이 0이기 때문에 이동된다.
+
+	// 점 입력을 쉽게 하기 위해서 마우스 Input을 이용하자.
+	// (0,0) (500,500) 픽셀의 사각형이다.
+
+	// 시작점은 화면 중앙(0,0)으로 한다고 하고
+	// 끝 점을 마우스 클릭을 받자
+
+	glUseProgram(m_SolidRectShader);
+
+	GLint posId = glGetAttribLocation(m_SolidRectShader, "a_Position");
+	glEnableVertexAttribArray(posId);
+
+	glBindBuffer(GL_ARRAY_BUFFER, m_VBOMovePoints);
+	glVertexAttribPointer(posId, 4, GL_FLOAT, GL_FALSE, 0, 0);
+
+	// uniform
+	// DrawArray 전에 불려야 한다.
+	GLuint id = glGetUniformLocation(m_SolidRectShader, "u_Scale");
+	glUniform1f(id, m_fTimer);
+
+	GLuint StartPoint = glGetUniformLocation(m_SolidRectShader, "u_startPoint");
+	glUniform2f(StartPoint, 0.0f, 0.0f);
+
+	GLuint EndPoint = glGetUniformLocation(m_SolidRectShader, "u_endPoint");
+	glUniform2f(EndPoint, m_targetPointX, m_targetPointY);
+	
+	// -1 ~ 1 사이
+	// Lecture 5에서 Uniform 값을 1보다 커지는 순간 -1.f 로 변경했기 때문에
+	// 처음 값이 1에 도달하면 전부 -1로 변경 되었다.
+
+	m_fTimer += 0.01f;
+	// 조건문을 지우면 전부 1로 가면서 사라진다.
+	// Vertex를 생성할 때 x 0에서 2초 사이에만 발생하도록 만들어 놨기 때문 
+	// 2초가 지난 Vertex 들은 1.f 값을 넘어가서 화면에서 사라진다. 
+	// 이 값을 (3초가 되는 순간을 1초가 되는 순간으로 변경하면 또 반복된다.)
+	//if (m_fTimer > 1.f) m_fTimer = -1.f;
+
+	glPointSize(2);
+
+	glDrawArrays(GL_POINTS, 0, 500);
+	
+}
+
+void Renderer::SetTargetPoint(float x, float y)
+{
+	// 픽셀을 좌우 (-1, 1) 상하 (1, -1) 의 사각형으로 변경해줘야 한다.
+	// (-inputY + 250) / 250
+	// ( inputX - 250) / 250
+
+	m_targetPointX = ( x - 250.f) / 250.f; // -1, 1
+	m_targetPointY = (-y + 250.f) / 250.f; // -1, 1
+
+	std::cout << m_targetPointX << ", " << m_targetPointY << "\n";
+
 }
