@@ -1,0 +1,5 @@
+﻿  GLSLBase.cpp
+f:\job\kpu\4 - 1\전공특강 (glsl)\glsl_kpu\실습\lecture 10 (bmp texture)\glslbase\glslbase.cpp(32): warning C4838: 'double'에서 'float'(으)로의 변환에는 축소 변환이 필요합니다.
+f:\job\kpu\4 - 1\전공특강 (glsl)\glsl_kpu\실습\lecture 10 (bmp texture)\glslbase\glslbase.cpp(32): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
+f:\job\kpu\4 - 1\전공특강 (glsl)\glsl_kpu\실습\lecture 10 (bmp texture)\glslbase\glslbase.cpp(66): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  GLSLBase.vcxproj -> F:\Job\KPU\4 - 1\전공특강 (GLSL)\GLSL_KPU\실습\Lecture 10 (BMP Texture)\x64\Debug\GLSLBase.exe
