@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Renderer.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="GLSLBase.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="LoadPng.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Renderer.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="LoadPng.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shaders\FAParticle.fs">
+      <Filter>Shader\FAParticle</Filter>
+    </None>
+    <None Include="Shaders\FAParticle.vs">
+      <Filter>Shader\FAParticle</Filter>
+    </None>
+    <None Include="Shaders\FillWindow.fs">
+      <Filter>Shader\FillWindow</Filter>
+    </None>
+    <None Include="Shaders\FillWindow.vs">
+      <Filter>Shader\FillWindow</Filter>
+    </None>
+    <None Include="Shaders\Rader.fs">
+      <Filter>Shader\Rader</Filter>
+    </None>
+    <None Include="Shaders\Rader.vs">
+      <Filter>Shader\Rader</Filter>
+    </None>
+    <None Include="Shaders\STParticle.fs">
+      <Filter>Shader\STParticle</Filter>
+    </None>
+    <None Include="Shaders\STParticle.vs">
+      <Filter>Shader\STParticle</Filter>
+    </None>
+    <None Include="Shaders\Texture.fs">
+      <Filter>Shader\Texture</Filter>
+    </None>
+    <None Include="Shaders\Texture.vs">
+      <Filter>Shader\Texture</Filter>
+    </None>
+    <None Include="Shaders\SolidRect.vs">
+      <Filter>Shader\Base</Filter>
+    </None>
+    <None Include="Shaders\SolidRect.fs">
+      <Filter>Shader\Base</Filter>
+    </None>
+    <None Include="Shaders\smileTexture.fs">
+      <Filter>Shader\SmileTexture</Filter>
+    </None>
+    <None Include="Shaders\smileTexture.vs">
+      <Filter>Shader\SmileTexture</Filter>
+    </None>
+    <None Include="Shaders\MultiTexture.fs">
+      <Filter>Shader\MultiTexture</Filter>
+    </None>
+    <None Include="Shaders\MultiTexture.vs">
+      <Filter>Shader\MultiTexture</Filter>
+    </None>
+    <None Include="Shaders\SingleTextureAnimation.fs">
+      <Filter>Shader\SingleTextureAnimation</Filter>
+    </None>
+    <None Include="Shaders\SingleTextureAnimation.vs">
+      <Filter>Shader\SingleTextureAnimation</Filter>
+    </None>
+    <None Include="Shaders\BlockTexture.fs">
+      <Filter>Shader\BlockTexutre</Filter>
+    </None>
+    <None Include="Shaders\BlockTexture.vs">
+      <Filter>Shader\BlockTexutre</Filter>
+    </None>
+    <None Include="Shaders\FaceSinCurvByVertexShader.fs">
+      <Filter>Shader\FaceSinCurvByVertexShader</Filter>
+    </None>
+    <None Include="Shaders\FaceSinCurvByVertexShader.vs">
+      <Filter>Shader\FaceSinCurvByVertexShader</Filter>
+    </None>
+    <None Include="Shaders\ParticleAnimation.fs">
+      <Filter>Shader\ParticleAnimation</Filter>
+    </None>
+    <None Include="Shaders\ParticleAnimation.vs">
+      <Filter>Shader\ParticleAnimation</Filter>
+    </None>
+    <None Include="Shaders\ProjectionShader.fs">
+      <Filter>Shader\ProjectionShader</Filter>
+    </None>
+    <None Include="Shaders\ProjectionShader.vs">
+      <Filter>Shader\ProjectionShader</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source">
+      <UniqueIdentifier>{a7fcb93d-3717-43ab-b316-e9d0ce5b8225}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header">
+      <UniqueIdentifier>{281c75ca-d516-457d-94dd-38314bf09c82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shader">
+      <UniqueIdentifier>{67bf60d2-2daa-4412-a92a-1ef604d4703f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shader\FAParticle">
+      <UniqueIdentifier>{4d04e9c0-96d2-400b-b845-0658dea818f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shader\FillWindow">
+      <UniqueIdentifier>{c94f78aa-81cb-4264-82b5-2b900a2c6a23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shader\Rader">
+      <UniqueIdentifier>{e055f35f-16d1-462c-8e01-29aa3f3385ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shader\STParticle">
+      <UniqueIdentifier>{cf62d329-531d-49e5-b5bb-4c7d5e285cc4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shader\Texture">
+      <UniqueIdentifier>{7e774b99-65d5-4fb4-b60e-d5bd8cb1baec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shader\Base">
+      <UniqueIdentifier>{3b3b2dec-59e4-41a3-b18a-656f7bb21e5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shader\SmileTexture">
+      <UniqueIdentifier>{285bfa43-3b59-47d9-a5bf-3ace10356473}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shader\MultiTexture">
+      <UniqueIdentifier>{efa3a3b1-b5a9-445c-ad06-5966102614e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shader\SingleTextureAnimation">
+      <UniqueIdentifier>{bf5bd1e0-4879-4688-b009-8f7cb1779912}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shader\BlockTexutre">
+      <UniqueIdentifier>{cae42400-536e-42a7-b340-edec2bb562cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shader\FaceSinCurvByVertexShader">
+      <UniqueIdentifier>{d459349b-1dbe-4827-a378-4172da8d6eb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shader\ParticleAnimation">
+      <UniqueIdentifier>{4467b33d-425b-4e9d-be0e-d62248dd342f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shader\ProjectionShader">
+      <UniqueIdentifier>{334517ba-7576-4a28-acc0-966fc40f20b6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

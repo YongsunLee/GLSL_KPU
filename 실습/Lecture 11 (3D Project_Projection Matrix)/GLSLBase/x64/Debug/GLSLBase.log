@@ -1,0 +1,6 @@
+﻿  Renderer.cpp
+f:\job\kpu\4 - 1\전공특강 (glsl)\glsl_kpu\실습\lecture 11 (3d project_projection matrix)\glslbase\renderer.cpp(244): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+f:\job\kpu\4 - 1\전공특강 (glsl)\glsl_kpu\실습\lecture 11 (3d project_projection matrix)\glslbase\renderer.cpp(245): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+f:\job\kpu\4 - 1\전공특강 (glsl)\glsl_kpu\실습\lecture 11 (3d project_projection matrix)\glslbase\renderer.cpp(406): warning C4267: '=': 'size_t'에서 'GLint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+f:\job\kpu\4 - 1\전공특강 (glsl)\glsl_kpu\실습\lecture 11 (3d project_projection matrix)\glslbase\renderer.cpp(715): warning C4244: '인수': 'GLfloat'에서 'GLint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  GLSLBase.vcxproj -> F:\Job\KPU\4 - 1\전공특강 (GLSL)\GLSL_KPU\실습\Lecture 11 (3D Project_Projection Matrix)\x64\Debug\GLSLBase.exe
