@@ -1,0 +1,10 @@
+﻿  Renderer.cpp
+c:\users\lys\documents\work\github\glsl_kpu\실습\extra lecture01\glslbase\renderer.cpp(134): warning C4267: '=': 'size_t'에서 'GLint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\lys\documents\work\github\glsl_kpu\실습\extra lecture01\glslbase\renderer.cpp(234): warning C4101: 'newY' :참조되지 않은 지역 변수입니다.
+c:\users\lys\documents\work\github\glsl_kpu\실습\extra lecture01\glslbase\renderer.cpp(234): warning C4101: 'newX' :참조되지 않은 지역 변수입니다.
+  코드를 생성하고 있습니다.
+  1 of 178 functions ( 0.6%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
+  코드를 생성했습니다.
+  GLSLBase.vcxproj -> C:\Users\LYS\Documents\Work\GitHub\GLSL_KPU\실습\Extra Lecture01\x64\Release\GLSLBase.exe
