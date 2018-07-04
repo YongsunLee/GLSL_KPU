@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Renderer.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="GLSLBase.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Renderer.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shaders\SolidRect.fs">
+      <Filter>Shader\SolidRect</Filter>
+    </None>
+    <None Include="Shaders\SolidRect.vs">
+      <Filter>Shader\SolidRect</Filter>
+    </None>
+    <None Include="Shaders\BloomShaderP1.fs">
+      <Filter>Shader\P1</Filter>
+    </None>
+    <None Include="Shaders\BloomShaderP1.vs">
+      <Filter>Shader\P1</Filter>
+    </None>
+    <None Include="Shaders\BloomShaderP2.fs">
+      <Filter>Shader\P2</Filter>
+    </None>
+    <None Include="Shaders\BloomShaderP2.vs">
+      <Filter>Shader\P2</Filter>
+    </None>
+    <None Include="Shaders\BloomShaderP3.fs">
+      <Filter>Shader\P3</Filter>
+    </None>
+    <None Include="Shaders\BloomShaderP3.vs">
+      <Filter>Shader\P3</Filter>
+    </None>
+    <None Include="Shaders\FBO1Shader.fs">
+      <Filter>Shader\FBO1Shader</Filter>
+    </None>
+    <None Include="Shaders\FBO1Shader.vs">
+      <Filter>Shader\FBO1Shader</Filter>
+    </None>
+    <None Include="Shaders\Texture.fs">
+      <Filter>Shader\Texture</Filter>
+    </None>
+    <None Include="Shaders\Texture.vs">
+      <Filter>Shader\Texture</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source">
+      <UniqueIdentifier>{a7fcb93d-3717-43ab-b316-e9d0ce5b8225}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header">
+      <UniqueIdentifier>{281c75ca-d516-457d-94dd-38314bf09c82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shader">
+      <UniqueIdentifier>{67bf60d2-2daa-4412-a92a-1ef604d4703f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shader\SolidRect">
+      <UniqueIdentifier>{1a45580d-8a43-4d71-8349-218f526c0a44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shader\P1">
+      <UniqueIdentifier>{1b6fdbd4-e9d9-4815-8c4a-221639e86766}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shader\P2">
+      <UniqueIdentifier>{2b834e45-4e9e-4096-a3fd-9898220bdcb3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shader\P3">
+      <UniqueIdentifier>{21c7189c-aec7-4797-a30e-ace862a7797d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shader\FBO1Shader">
+      <UniqueIdentifier>{9c76c99d-7859-4e46-a67f-bab87c6f156d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shader\Texture">
+      <UniqueIdentifier>{1854a55d-51bd-41b7-bb9e-0537fcc2179b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
